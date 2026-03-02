@@ -20,7 +20,7 @@
 
       <section class="panel p-4">
         <div class="row g-4">
-          <div class="col-lg-6">
+          <div class="col-lg-6 order-1">
             <div class="card h-100 shadow-sm">
               <div class="card-body d-flex flex-column gap-3">
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
@@ -40,7 +40,14 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-12 order-2 order-lg-3">
+            <div class="d-grid d-sm-flex align-items-sm-center gap-3 actions">
+              <button class="btn btn-primary px-4" onclick="translateText()">翻訳する</button>
+              <p class="text-muted small mb-0">API 連携が完了していない場合は結果が表示されません。</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 order-3 order-lg-2">
             <div class="card h-100 shadow-sm">
               <div class="card-body d-flex flex-column gap-3">
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
@@ -59,11 +66,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="d-grid d-sm-flex align-items-sm-center gap-3 mt-4 actions">
-          <button class="btn btn-primary px-4" onclick="translateText()">翻訳する</button>
-          <p class="text-muted small mb-0">API 連携が完了していない場合は結果が表示されません。</p>
         </div>
       </section>
     </main>
