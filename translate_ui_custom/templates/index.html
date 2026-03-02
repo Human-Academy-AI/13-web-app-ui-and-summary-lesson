@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>多言語翻訳アプリ - プレーン</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <span class="tag">No Middleware UI</span>
+        <h1>多言語翻訳アプリ</h1>
+        <p>教材用に、プレーンな HTML/CSS だけで整えた UI です。</p>
+      </header>
+
+      <section class="panel">
+        <div class="grid">
+          <section class="card">
+            <div class="card-head">
+              <h2>翻訳元</h2>
+              <label class="field">
+                <span>言語</span>
+                <select id="source-language">
+                  <option value="ja">日本語</option>
+                  <option value="en">英語</option>
+                  <option value="es">スペイン語</option>
+                  <option value="fr">フランス語</option>
+                </select>
+              </label>
+            </div>
+            <textarea id="input-text" placeholder="ここに翻訳したい文章を入力してください"></textarea>
+          </section>
+
+          <section class="card">
+            <div class="card-head">
+              <h2>翻訳先</h2>
+              <label class="field">
+                <span>言語</span>
+                <select id="target-language">
+                  <option value="en">英語</option>
+                  <option value="ja">日本語</option>
+                  <option value="es">スペイン語</option>
+                  <option value="fr">フランス語</option>
+                </select>
+              </label>
+            </div>
+            <textarea id="output-text" placeholder="翻訳結果がここに表示されます" readonly></textarea>
+          </section>
+        </div>
+
+        <div class="actions">
+          <button class="primary" onclick="translateText()">翻訳する</button>
+          <p class="hint">API 連携が完了していない場合は結果が表示されません。</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/axios@1.4.0/dist/axios.min.js"></script>
+    <script src="./static/main.js"></script>
+  </body>
+</html>
