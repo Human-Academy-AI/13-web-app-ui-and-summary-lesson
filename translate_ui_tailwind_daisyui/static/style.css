@@ -23,6 +23,37 @@
   color: #1b1a16 !important;
 }
 
+.select,
+.textarea {
+  background-color: #fffaf3 !important;
+  color: #1b1a16 !important;
+  border-color: #e7ddcf !important;
+  border-radius: 14px !important;
+}
+
+.select:focus,
+.textarea:focus {
+  outline-color: #c4692f !important;
+}
+
+.btn.btn-primary {
+  background-color: #c4692f !important;
+  border-color: #c4692f !important;
+}
+
+.btn.btn-primary:hover {
+  background-color: #b25a22 !important;
+  border-color: #b25a22 !important;
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 45px rgba(27, 26, 22, 0.12) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 14px 30px rgba(27, 26, 22, 0.08) !important;
+}
+
 textarea.textarea[readonly] {
   background-color: color-mix(in srgb, #f7f1e8 70%, #ffffff 30%);
 }
