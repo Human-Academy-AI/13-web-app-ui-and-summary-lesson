@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="ja" data-theme="coffee">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>多言語翻訳アプリ - Tailwind + DaisyUI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./static/style.css" />
+  </head>
+  <body class="min-h-screen bg-base-200 text-base-content font-sans">
+    <main class="mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-8 px-4 py-10">
+      <header class="rounded-3xl bg-base-100 p-8 shadow-xl">
+        <div class="inline-flex items-center gap-2 rounded-full bg-base-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
+          Tailwind + DaisyUI
+        </div>
+        <h1 class="mt-4 text-3xl font-bold md:text-4xl">多言語翻訳アプリ</h1>
+        <p class="mt-2 max-w-2xl text-sm text-base-content/70">
+          Tailwind CSS と DaisyUI のコンポーネントを使い、素早く統一感のある UI に整えています。
+        </p>
+      </header>
+
+      <section class="rounded-3xl bg-base-100 p-6 shadow-lg md:p-8">
+        <div class="grid gap-6 lg:grid-cols-2">
+          <section class="rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h2 class="text-lg font-bold">翻訳元</h2>
+              <label class="form-control w-36">
+                <span class="label-text text-xs text-base-content/60">言語</span>
+                <select id="source-language" class="select select-bordered select-sm">
+                  <option value="ja">日本語</option>
+                  <option value="en">英語</option>
+                  <option value="es">スペイン語</option>
+                  <option value="fr">フランス語</option>
+                </select>
+              </label>
+            </div>
+            <textarea id="input-text" class="textarea textarea-bordered mt-4 min-h-48" placeholder="ここに翻訳したい文章を入力してください"></textarea>
+          </section>
+
+          <div class="order-2 flex items-center">
+            <div class="w-full rounded-2xl border border-base-300 bg-base-200 p-4">
+              <button class="btn btn-primary w-full text-base font-semibold" onclick="translateText()">翻訳する</button>
+              <p class="mt-2 text-xs text-base-content/60">API 連携が完了していない場合は結果が表示されません。</p>
+            </div>
+          </div>
+
+          <section class="order-3 rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h2 class="text-lg font-bold">翻訳先</h2>
+              <label class="form-control w-36">
+                <span class="label-text text-xs text-base-content/60">言語</span>
+                <select id="target-language" class="select select-bordered select-sm">
+                  <option value="en">英語</option>
+                  <option value="ja">日本語</option>
+                  <option value="es">スペイン語</option>
+                  <option value="fr">フランス語</option>
+                </select>
+              </label>
+            </div>
+            <textarea id="output-text" class="textarea textarea-bordered mt-4 min-h-48" placeholder="翻訳結果がここに表示されます" readonly></textarea>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/axios@1.4.0/dist/axios.min.js"></script>
+    <script src="./static/main.js"></script>
+  </body>
+</html>

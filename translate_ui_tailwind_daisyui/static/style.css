@@ -1,0 +1,7 @@
+﻿body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+textarea.textarea[readonly] {
+  background-color: color-mix(in srgb, #f7f1e8 70%, #ffffff 30%);
+}
