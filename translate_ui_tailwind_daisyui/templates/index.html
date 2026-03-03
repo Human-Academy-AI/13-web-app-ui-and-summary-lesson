@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./static/style.css" />
   </head>
   <body class="min-h-screen bg-base-200 text-base-content font-sans">
-    <main class="mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-8 px-4 py-10">
+    <main class="mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-8 px-4 pb-24 pt-10 sm:py-10">
       <header class="rounded-3xl bg-base-100 p-8 shadow-xl">
         <div class="inline-flex items-center gap-2 rounded-full bg-base-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
           Tailwind + DaisyUI
@@ -41,14 +41,7 @@
             <textarea id="input-text" class="textarea textarea-bordered mt-4 min-h-48" placeholder="ここに翻訳したい文章を入力してください"></textarea>
           </section>
 
-          <div class="order-2 flex items-center">
-            <div class="w-full rounded-2xl border border-base-300 bg-base-200 p-4">
-              <button class="btn btn-primary w-full text-base font-semibold" onclick="translateText()">翻訳する</button>
-              <p class="mt-2 text-xs text-base-content/60">API 連携が完了していない場合は結果が表示されません。</p>
-            </div>
-          </div>
-
-          <section class="order-3 rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm">
+          <section class="rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm">
             <div class="flex flex-wrap items-center justify-between gap-3">
               <h2 class="text-lg font-bold">翻訳先</h2>
               <label class="form-control w-36">
@@ -64,8 +57,19 @@
             <textarea id="output-text" class="textarea textarea-bordered mt-4 min-h-48" placeholder="翻訳結果がここに表示されます" readonly></textarea>
           </section>
         </div>
+
+        <div class="mt-6 hidden items-center gap-3 sm:flex">
+          <button class="btn btn-primary px-6 text-base font-semibold" onclick="translateText()">翻訳する</button>
+          <p class="text-xs text-base-content/60">API 連携が完了していない場合は結果が表示されません。</p>
+        </div>
+
+        <p class="mt-4 text-xs text-base-content/60 sm:hidden">API 連携が完了していない場合は結果が表示されません。</p>
       </section>
     </main>
+
+    <button class="btn btn-primary fixed bottom-5 left-4 right-4 z-50 rounded-full text-base font-semibold shadow-xl sm:hidden" onclick="translateText()">
+      翻訳する
+    </button>
 
     <script src="https://unpkg.com/axios@1.4.0/dist/axios.min.js"></script>
     <script src="./static/main.js"></script>
