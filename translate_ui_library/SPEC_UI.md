@@ -1,8 +1,5 @@
 ﻿# 仕様書（UI詳細）: translate_ui_library
 
-> **カスタム仕様（`translate_ui_custom/SPEC_UI.md`）を全文掲載し、差分は取り消し線で示す。**
-> 変更点は取り消し線の直後に追記する。
-
 ## 1. 画面構成
 - ヘッダー: タイトル、短い説明文、タグ表示
 - 2カラム: 翻訳元 / 翻訳先カード
@@ -41,4 +38,3 @@
 - `templates/index.html`
 - `static/style.css`
 - `static/main.js`
-
