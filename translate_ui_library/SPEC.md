@@ -1,4 +1,4 @@
-﻿# 仕様書（5W1H）: translate_ui_tailwind_daisyui
+﻿# 仕様書（5W1H）: translate_ui_library
 
 ## 1. Why（なぜ作るか）
 - 教材として「仕様書ベースAIコーディング」の流れを体験するため
@@ -22,7 +22,7 @@
 
 ## 5. Where（どこで使うか）
 - ローカル環境（教材リポジトリ内）
-- `translate_ui_tailwind_daisyui` フォルダ内
+- `translate_ui_library` フォルダ内
 - Google Colab 上
 - Cloudflare Tunnel を用いた動作確認環境
 
@@ -35,3 +35,4 @@
 
 ## 6-A. 詳細仕様（別紙）
 - 画面要素、デザイン方針、動作仕様は `SPEC_UI.md` に記載する
+
